@@ -11,14 +11,14 @@ package com.danades.parkir;
  */
 public class Parkir {
     
-    String kendaraan;
-    String[] area = {
+    String kendaraan;              //variabel kendaraan
+    String[] area = {              // variabel area
         "- Area parkir motor",
         "- Area parkir mobil",
         "- Area parkir bus"
     };
     
-    void CekLot(){   
+    void CekLot(){   //method ngecek lot yang tersedia
         System.out.println("\nLot parkir yang diperbolehkan :");
         if (kendaraan.equalsIgnoreCase("motor"))
              System.out.printf(area[0]+ "\n" + area[1] + "\n" + area[2] + "\n");

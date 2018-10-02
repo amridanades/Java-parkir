@@ -22,22 +22,22 @@ public class Main {
         String answer = "n";
         
         while(running){
-            InputStreamReader isr = new InputStreamReader(System.in);
+            InputStreamReader isr = new InputStreamReader(System.in);  //io
             BufferedReader input = new BufferedReader(isr);
 
-            Parkir p = new Parkir();
+            Parkir p = new Parkir(); //object
             try {
                 System.out.print("Jenis Kendaraan : ");
-                p.kendaraan = input.readLine();
+                p.kendaraan = input.readLine();     // input kendaraan
             } catch (IOException ex) {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
             }
-            p.CekLot();
+            p.CekLot(); // ngecek lot
              System.out.println("----------------------------------------------------------------------");
             System.out.println("Apakah anda ingin keluar? ");
             System.out.print("[Y/N] : ");
             try {
-                answer = input.readLine();
+                answer = input.readLine();  // input menu keluar
             } catch (IOException ex) {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
             }
