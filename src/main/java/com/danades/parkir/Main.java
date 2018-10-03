@@ -32,17 +32,21 @@ public class Main {
             } catch (IOException ex) {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
             }
-            p.CekLot(); // ngecek lot
-             System.out.println("----------------------------------------------------------------------");
-            System.out.println("Apakah anda ingin keluar? ");
-            System.out.print("[Y/N] : ");
-            try {
-                answer = input.readLine();  // input menu keluar
-            } catch (IOException ex) {
-                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            if( answer.equalsIgnoreCase("Y") ){
-                running = false;
+            if (p.kendaraan.equalsIgnoreCase("")){
+                    System.out.println("Tidak boleh kosong");
+                }else {
+                p.CekLot(); // ngecek lot
+                System.out.println("----------------------------------------------------------------------");
+                System.out.println("Apakah anda ingin keluar? ");
+                System.out.print("[Y/N] : ");
+                try {
+                    answer = input.readLine();  // input menu keluar
+                } catch (IOException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                if( answer.equalsIgnoreCase("Y") ){
+                    running = false;
+                }
             }
         }
     }
